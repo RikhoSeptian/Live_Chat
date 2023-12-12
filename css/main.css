@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #faf5bc 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button {
+    font-size: 16px;
+}
+
+.head_bar {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+    color: white;
+    display: none;
+}
+
+main {
+    max-width: 800px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px;
+
+}
+
+.input_section {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+}
+
+.input_section > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.input_section > a {
+    font-size: 10px;
+    margin-left: 80px;
+    margin-top: 10px;
+    color: #000;
+    text-decoration: none;
+    position: absolute;
+}
+
+.input_section > h2 {
+    color: #000;
+    background: #fff;
+    height: 70px;
+    border-radius: 10px 10px 0px 0px;
+    padding-top: 30px;
+    padding-left: 80px;
+}
+
+.input_section > form {
+    padding: 20px;
+    border: 1px solid;
+    border-radius: 0 0 10px 10px;
+    margin-bottom: 40px;
+}
+
+.input_section > form > .input {
+    margin: 8px 0;
+}
+
+.input_section > form > button {
+    background-color: #000;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.input_section > form > button > span {
+    font-weight: bold;
+}
+
+.input_section > form > .input > input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background: none;
+    font-weight: 800;
+    border: none;
+}
+
+
+.input_section > form > .input > label {
+    color: cornflowerblue;
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.input_section > form > .input_inline > label {
+    color: cornflowerblue;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* my css */
+.input_section > form > .input > input:focus {
+outline: none;
+}
+
+::-webkit-input-placeholder {
+    font-size: 18px;
+    color: rgba(59, 56, 56, 0.2);
+}
+
+.search_section {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.search_section > h2 {
+    color: #000;
+}
+
+.search_section > form {
+    /* padding: 16px; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr 0.5fr;
+    grid-gap: 10px;
+}
+
+.search_section > form > label {
+    display: flex;
+    align-items: center;
+}
+
+.search_section > form > input {
+    width: 250px;
+    padding: 5px;
+    border-radius: 5px;
+    background: none;
+    border: 2px solid ;
+}
+
+.search_section > form > input:focus {
+    outline: none;
+}
+
+.search_section > form > input::-webkit-input-placeholder {
+    font-size: 20px;
+    background: none;
+}
+
+.search_section > form > button {
+    width: 100px;
+    color: #000;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.book_shelf {
+    margin: 16px 0 0 0;
+    border: 1px solid black;
+    padding: 16px;
+    border-radius: 10px;
+    background: #2e2b2b;
+}
+
+.book_shelf > h2 {
+    color: #fff;
+}
+
+.book_shelf > .book_list {
+    padding: 16px;
+    background: none;
+    border-top: 2px solid;
+}
+
+.book_shelf > .book_list > .book_item > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.book_shelf > .book_list > .book_item {
+    padding: 8px 16px 16px 16px;
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+}
+
+.book_shelf > .book_list > .book_item > h3 {
+    margin-left: 60px;
+}
+
+.book_shelf > .book_list > .book_item > p {
+    margin-left: 70px;
+    margin-bottom: 20px;
+    font-size: 10px;
+    line-height: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000;
+}
+.book_shelf > .book_list > .book_item > a {
+    text-decoration: none;
+    font-size: 10px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.book_shelf > .book_list > .book_item > .action > button {
+    border: 0;
+    padding: 5px;
+    margin: 0 5px 0 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book_shelf > .book_list > .book_item > .action > .green {
+    background-color: darkgreen;
+    color: white;
+}
+
+.book_shelf > .book_list > .book_item > .action > .red {
+    background-color: darkred;
+    color: white;
+}
+
+@media (max-width: 576px) {
+    
+}
