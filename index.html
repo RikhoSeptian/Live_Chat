@@ -11,6 +11,9 @@
         rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   <!-- <link rel="stylesheet" href="style.css"> -->
+
+  <!-- email -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -39,7 +42,7 @@
         <!-- <label for="inputBookIsComplete">Selesai dibaca</label> -->
         <input id="inputBookIsComplete" type="hidden" value="false">
       </div>
-      <button id="bookSubmit" type="submit">Kirim <span>Pesan</span></button>
+      <button id="bookSubmit" onclick="sendMessage(); reset();" type="submit">Kirim <span>Pesan</span></button>
     </form>
   </section>
   
@@ -90,6 +93,27 @@
 </main>
 
 <script src="js/main.js"></script>
+<script>
+    function sendMessage() {
+      (function () {
+        emailjs.init("7VGhcgiZT0YuNbmAg"); // account public key
+      })();
+
+      var serviceID = "service_9e0fnmp"; // email service ID
+      var templateID = "template_76bfejg"; // email template ID
+
+      var params = {
+        sendername: document.getElementById("inputBookTitle").value,
+        senderemail: document.getElementById("inputBookYear").value,
+        subject: document.getElementById("inputBookIsComplete").value,
+        message: document.getElementById("inputBookAuthor").value
+      };
+
+      emailjs.send(serviceID, templateID, params).then( res => {
+        alert("Terimakasih, " + params['sendername'] + '! Pesan anda sudah terkirim.');
+      }).catch();
+    }
+  </script>
 
 </body>
 </html>
